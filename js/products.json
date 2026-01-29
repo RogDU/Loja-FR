@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "image": "funko1.png",
+      "product_name": "Funko Pop Frodo Baggins FR444",
+      "product_model": "Senhor Dos Aneis",
+      "price": 60.00
+    },
+    {
+      "id": 2,
+      "image": "funko2.png",
+      "product_name": "Daemon Targaryen Funko FR445",
+      "product_model": "House of the Dragon",
+      "price": 89.99
+    },
+    {
+      "id": 3,
+      "image": "funko3.png",
+      "product_name": "Funko Kylo Ren FR446",
+      "product_model": "Star Wars",
+      "price": 55.00
+    },
+    {
+      "id": 4,
+      "image": "funko4.png",
+      "product_name": "Jon Snow 07 FR447",
+      "product_model": "Game Of Thrones",
+      "price": 70.00
+    },
+    {
+      "id": 5,
+      "image": "funko5.png",
+      "product_name": "Chris Stapleton FR448",
+      "product_model": "rock city music",
+      "price": 54.99
+    },
+    {
+      "id": 6,
+      "image": "funko6.png",
+      "product_name": "Robb Stark FR449",
+      "product_model": "Game Of Thrones",
+      "price": 45.99
+    }
+  ]
