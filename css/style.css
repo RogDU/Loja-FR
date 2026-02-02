@@ -157,7 +157,7 @@ main {
     flex-basis: 336px;
 }
 
-.card__produto figure, .produto__detalhes_imagens {
+.card__produto figure, .produto__detalhes_imagens figure {
     width: 100%;
     height: 200px;
     background-color: var(--white_soft);
@@ -188,6 +188,44 @@ main {
     font-size: 18px; /* estava 16  */
     line-height: 28px; /* estava 32 */
     font-family: "Space Grotesk", sans-serif;
+}
+
+.produto__detalhes {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    justify-content: center;
+}
+
+.produto__detalhes_imagens {
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.detalhes, .tamanho, .botao, .descricao {
+    margin-bottom: 20px;
+}
+
+.botao {
+    width: 100%;
+}
+
+.botao button {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--dark);
+    color: var(--white);
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Responsividade */
