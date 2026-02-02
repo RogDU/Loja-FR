@@ -18,6 +18,67 @@ body {
     font-family: Archivo, sans-serif;
 }
 
+/* topo */
+.topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--white_soft);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topo__marca a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.topo__marca img {
+    margin-right: 5px;
+}
+
+.topo__marca h1 {
+    font-size: 24px;
+}
+
+.btn__carrinho {
+    position: relative;
+    display: inline-block;
+}
+
+.btn__carrinho span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn__carrinho .icone {
+    font-size: 28px;
+}
+
+.btn__carrinho .icone:hover {
+    filter: invert(0.5);
+}
+
+.btn__carrinho .numero_itens {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #f44336;
+    color: #f1f1f1;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+}
+
 .top_fixed {
     width: 100%;
     height: 64px;
@@ -32,7 +93,7 @@ body {
 .hero {
     width: 100%;
     height: 400px;
-    background-image: url('../images/image-michael-jordan.png');
+    background-image: url('../images/imgFunkoRogs.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -167,6 +228,13 @@ main {
     justify-content: center;
 }
 
+/* aula 08 */
+.card__produto figure:hover {
+    border: 1px solid var(--brand_color);
+    cursor: pointer;
+}
+
+
 .card__produto_detalhes {
     margin-block: 24px;
 
@@ -271,9 +339,17 @@ main {
         gap: 32px;
     }
 
-    .card__produto_detalhes h4 {
-        font-size: 18px;
-    }
+    
+.card__produto_detalhes h4 {
+    font-size: 18px;
+    line-height: 28px;
+    /* ajuste feito na aula 09 */
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
     .card__produto_detalhes h5 {
         font-size: 16px;
@@ -315,3 +391,521 @@ main {
     }
 
 }
+
+/* aula 08 */
+
+/* detalhes do produto - nome, descricao e preco */
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detalhes h4 {
+    font-size: 24px;
+}
+
+.detalhes h5 {
+    font-size: 16px;
+    color: var(--brand_color);
+}
+
+.detalhes h6 {
+    font-size: 24px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* tamanho */
+.tamanho h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tamanhos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.numeros {
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+/* descricao - texto descrito */
+.descricao {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.descricao p {
+    margin-bottom: 10px;
+}
+
+.descricao ul {
+    margin-left: 20px;
+}
+
+/* frete */
+details::marker,
+summary::marker {
+  content: "";
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.icone-expandir::after,
+.icone-recolher::after {
+    content: "";
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icon_expand_more.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+.icone-recolher::after {
+    background-image: url('../images/icon_expand_less.svg');
+}
+
+details {
+    font-size: 16px;
+}
+
+details p {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.input {
+    margin-block: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input input, .input select {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.bloco {
+    width: 100%;
+    margin-block: 20px;
+}
+
+.input .checkbox {
+    width: 20px;
+}
+
+.input select {
+    background-image: url('../images/icon_expand_more.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 25px;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-apparence: none;
+    appearance: none;
+}
+
+.input button {
+    font-size: 16px;
+    font-weight: 500;
+    width: 120px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    margin-right: 5px;
+}
+
+.input button:hover {
+    border-color: #222;
+}
+
+details a {
+    color: var(--dark);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.voltar {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.voltar:hover {
+    cursor: pointer;
+    border: 1px solid var(--brand_color);
+}
+.numeros {
+    height: 40px;
+    border: 1px solid #ccc;
+    /* aula 10 */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* aula 10 */
+.numeros:hover {
+    border-color: var(--dark);
+    cursor: pointer;
+}
+
+.radio {
+    display: none;
+}
+
+.selecionado {
+    border-color: var(--dark);
+}
+
+/* carrinho */
+.carrinho {
+    display: none; /* block */
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    margin-block: 20px;
+    padding-inline: 20px;
+}
+
+.carrinho h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr, th, td {
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+table td {
+    padding-inline: 10px;
+}
+
+.coluna_tamanho, .coluna_preco {
+    text-align: right;
+}
+
+.coluna_apagar {
+    width: 65px;
+    text-align: center;
+}
+
+.coluna_apagar span:hover {
+    cursor: pointer;
+    color: red;
+}
+
+tfoot {
+    text-align: right;
+}
+/* DETALHES DO CARRINHO */
+
+.btn__carrinho {
+    position: relative;
+    display: flex;
+}
+
+.btn__carrinho_icone {
+    position: relative;
+}
+
+.btn__carrinho_user {
+    display: flex;
+    align-items: center;
+}
+.carrinho__detalhes {
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrinho__detalhes label, .carrinho__detalhes h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* .carrinho__detalhes .frete */
+.carrinho__detalhes .frete p {
+    margin-bottom: 10px;
+}
+
+/* .carrinho__detalhes .cupom_desconto */
+.cupom_desconto input {
+    min-width: 320px;
+}
+
+/* .carrinho__detalhes .resumo */
+.carrinho__detalhes .resumo {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resumo ul {
+    margin-bottom: 20px;
+}
+
+.resumo li {
+    font-size: 16px;
+    line-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.resumo li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+@media (max-width: 1024px) {
+    .carrinho__detalhes {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .carrinho__detalhes label, .carrinho__detalhes h3 {
+        font-size: 18px;
+    }
+    .carrinho__detalhes p {
+        font-size: 14px;
+    }
+}
+
+.identificacao, .pagamento {
+    margin-top: 50px;
+    padding-inline: 20px;
+    width: 100%;
+}
+
+.identificacao h2, .pagamento h2 {
+    text-align: center;
+}
+
+.icone {
+    user-select: none;
+}
+
+/* modal ou pop-up login */
+.modal_login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    background-color: var(--white_soft);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Certifique-se de que o pop-up apareça acima de outro conteúdo */
+}
+
+.modal_login h2, .modal_cadastrar_usuario h2 {
+    text-align: center;
+}
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Posicione atrás do pop-up */
+}
+
+.modal_login.hidden, .modal_overlay.hidden {
+    display: none;
+}
+
+.modal_login.show, .modal_overlay.show {
+    display: block;
+}
+
+.btn_close_login, .btn_close_cadastrar {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.btn_close_login:hover, .btn_close_cadastrar:hover {
+    font-weight: bold;
+    color: #fff;
+    background-color: #222;
+}
+
+.modal_login .botao {
+    margin-top: 20px;
+}
+
+.icone {
+    user-select: none;
+}
+
+/* modal cadastrar usuario */
+.centralizar {
+    text-align: center;
+}
+.link_cadastrar {
+    color: var(--dark);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link_cadastrar:hover {
+    text-decoration: underline;
+}
+
+/* modal ou pop-up login */
+.modal_login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: var(--white_soft);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Certifique-se de que o pop-up apareça acima de outro conteúdo */
+}
+
+.modal_login h2 {
+    text-align: center;
+}
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Posicione atrás do pop-up */
+}
+
+.modal_login.hidden, .modal_overlay.hidden {
+    display: none;
+}
+
+.modal_login.show, .modal_overlay.show {
+    display: block;
+}
+
+.btn_close_login {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.btn_close_login:hover {
+    font-weight: bold;
+    color: #fff;
+    background-color: #222;
+}
+
+.modal_login .botao {
+    margin-top: 20px;
+}
+/* ajuste aula 27 */
+.botao button, .btn_continuar, .btn_fazer_login, .btn_criar_conta { 
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--dark);
+    color: var(--white);
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* aula 27 */
+.identifique-se {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    gap: 20px;
+}
+
+.identifique-se span {
+    text-align: center;
+}
+
+.identifique-se h2, .identifique-se h3 {
+    margin-bottom: 20px;
+}
+
+.criar_conta, .entrar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #ccc;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
